@@ -1,4 +1,4 @@
-namespace customlibrary {
+namespace xgp {
     
     //% block
     export function sayHello(): void {
@@ -6,7 +6,7 @@ namespace customlibrary {
     }
 
     //% block
-    export function addNumbers(a: number, b: number): void {
-        basic.showString("a+b");
+    export function addNumbers(a: number, b: number): number {
+         return a+b;
     }
 }
