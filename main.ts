@@ -3,7 +3,6 @@ namespace microbit_carrr {
 
     const PWM_ADD = 0x01
     const MOTOR = 0x02
-    const RGB = 0x03
 
     export enum CarState {
         //% blockId="Car_Run" block="Run"
@@ -75,6 +74,7 @@ namespace microbit_carrr {
 
         setPwmMotor(6, speed1, speed2);
     }
+    
     //% blockId=Tinybit_CarCtrl block="CarCtrl|%index"
     //% weight=93
     //% blockGap=10
