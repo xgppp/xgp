@@ -3,7 +3,7 @@ namespace microbit_car {
 
     const PWM_ADD = 0x01
     const MOTOR = 0x02
-    const RGB = 0x01
+    const RGB = 0x03
 
     export enum CarState {
         //% blockId="Car_Run" block="Run"
