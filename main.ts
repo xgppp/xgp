@@ -283,7 +283,6 @@ namespace microbit_carxgp {
     let lineFollowPin1: AnalogPin;
     let lineFollowPin2: AnalogPin;
     //% block="Initialize lineFollowSensor|port %port"
-    //% subcategory=LinePatrolSensor
     export function lineFollowSensor_init(port: startbit_lineFollowPort) {
         switch (port) {
             case startbit_lineFollowPort.port1:
@@ -310,7 +309,6 @@ namespace microbit_carxgp {
     }
 
     //% block="Initialize lineFollow iic|port %port"
-    //% subcategory=LinePatrolSensor
     export function lineFollow_iic_init(port: startbit_iic) {
         switch (port) {
             case startbit_iic.port3:
@@ -326,7 +324,6 @@ namespace microbit_carxgp {
    * Get the condition of the line follower sensor
    */
     //% block="Line follower status|%status"
-    //% subcategory=LinePatrolSensor
     export function startbit_readLineFollowerStatus(status: startbit_lineFollower): boolean {
         let s1 = 0;
         let s2 = 0;
@@ -357,7 +354,6 @@ namespace microbit_carxgp {
      * Get the line follower sensor port ad value
      */
     //% block="Get line follower sensor|%sensor|ad value"
-    //% subcategory=LinePatrolSensor
     export function startbit_lineSensorValue(sensor: startbit_LineFollowerSensor): number {
         let s1 = 0;
         let s2 = 0;
@@ -398,7 +394,6 @@ namespace microbit_carxgp {
 
     //% block="Line follower %lineFollowerSensor in %LineColor ?"
     //% inlineInputMode=inline
-    //% subcategory=LinePatrolSensor
     export function startbit_line_followers(lineFollowerSensor: startbit_LineFollowerSensors, LineColor: startbit_LineColor): boolean {
         pins.i2cWriteNumber(LINE_FOLLOWER_I2C_ADDR, 1, NumberFormat.UInt8BE);
         let data = pins.i2cReadNumber(LINE_FOLLOWER_I2C_ADDR, NumberFormat.UInt8BE);
