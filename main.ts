@@ -282,7 +282,8 @@ namespace microbit_carxgp {
 
     let lineFollowPin1: AnalogPin;
     let lineFollowPin2: AnalogPin;
-    //% weight=92 blockId=lineFollowSensor_init  block="Initialize lineFollowSensor|port %port"
+    //% block="Initialize lineFollowSensor|port %port"
+    //% subcategory=Line patrol sensor
     export function lineFollowSensor_init(port: startbit_lineFollowPort) {
         switch (port) {
             case startbit_lineFollowPort.port1:
@@ -308,7 +309,8 @@ namespace microbit_carxgp {
         port6 = 0x06
     }
 
-    //% weight=86 blockId=lineFollow_iic_init  block="Initialize lineFollow iic|port %port"
+    //% block="Initialize lineFollow iic|port %port"
+    //% subcategory=Line patrol sensor
     export function lineFollow_iic_init(port: startbit_iic) {
         switch (port) {
             case startbit_iic.port3:
@@ -323,7 +325,7 @@ namespace microbit_carxgp {
     /**
    * Get the condition of the line follower sensor
    */
-    //% weight=96 blockId=startbit_readLineFollowerStatus block="Line follower status|%status"
+    //% block="Line follower status|%status"
     //% subcategory=Line patrol sensor
     export function startbit_readLineFollowerStatus(status: startbit_lineFollower): boolean {
         let s1 = 0;
@@ -354,7 +356,7 @@ namespace microbit_carxgp {
     /**
      * Get the line follower sensor port ad value
      */
-    //% weight=89 blockId=startbit_lineSensorValue blockGap=50 block="Get line follower sensor|%sensor|ad value"
+    //% block="Get line follower sensor|%sensor|ad value"
     //% subcategory=Line patrol sensor
     export function startbit_lineSensorValue(sensor: startbit_LineFollowerSensor): number {
         let s1 = 0;
@@ -394,7 +396,7 @@ namespace microbit_carxgp {
 
     const LINE_FOLLOWER_I2C_ADDR = 0x78
 
-    //% weight=95 blockId=startbit_line_followers blockGap=50 block="Line follower %lineFollowerSensor in %LineColor ?"
+    //% block="Line follower %lineFollowerSensor in %LineColor ?"
     //% inlineInputMode=inline
     //% subcategory=Line patrol sensor
     export function startbit_line_followers(lineFollowerSensor: startbit_LineFollowerSensors, LineColor: startbit_LineColor): boolean {
