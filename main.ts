@@ -255,7 +255,7 @@ namespace microbit_car {
      * @param speed [-100,100] percent of fullspeed
      */
     //% block="Car Rotation speed =$speed"
-    //% subcategory=Servo/Motor
+    //% subcategory=xgp
     export function CarRotation(speed: number = 0): void {
         speed = Math.max(0, Math.min(100, speed))
         MotorControl(Motor.MotorLF, speed)
@@ -268,10 +268,10 @@ namespace microbit_car {
      * Car Rotation
      * @param speed [-100,100] percent of fullspeed
      */
-    //% block="Car Rotation speed =$speed"
-    //% subcategory= xgp
-    export function startbit_readLineFollowerStatus(speed: number = 0): void{
-        
+    //% block="Car Rotation =$speed"
+    //% subcategory= xgp1
+    export function startbit(speed: number = 0): void{
+        speed = Math.max(0, Math.min(100, speed))
     }
 
 }
