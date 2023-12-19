@@ -264,54 +264,14 @@ namespace microbit_car {
         MotorControl(Motor.MotorRR, -speed)
     }
 
-
-    export enum startbit_lineFollower {
-        
-        S1_OUT_S2_OUT = 0x00,
-
-        S1_OUT_S2_IN = 0x01,
-
-        S1_IN_S2_OUT = 0x02,
-
-        S1_IN_S2_IN = 0x03
-    }
-
-    export enum startbit_lineFollowPort {
-        port1 = 0x01
-    }
-
-    let lineFollowPin1: AnalogPin;
-    let lineFollowPin2: AnalogPin;
-
     /**
-   * Get the condition of the line follower sensor
-   */
-    //% block="Line follower status $status"
-    //% subcategory=LinePatrolSensor
-    export function startbit_readLineFollowerStatus(status: startbit_lineFollower): boolean {
-        let s1 = 0;
-        let s2 = 0;
-
-        s1 = pins.analogReadPin(lineFollowPin1);
-        s2 = pins.analogReadPin(lineFollowPin2);
-        s1 = s1 * 255 / 1023;
-        s2 = s2 * 255 / 1023;
-        if (s1 < 200)
-            s1 = 0;
-        else
-            s1 = 1;
-        if (s2 < 200)
-            s2 = 0;
-        else
-            s2 = 1;
-
-        let s = ((1 & s1) << 1) | s2;
-        if (s == status) {
-            return true;
-        }
-        else {
-            return false;
-        }
+     * Car Rotation use Mecanum wheel
+     * @param speed [-100,100] percent of fullspeed
+     */
+    //% block="Car Rotation speed =$speed"
+    //% subcategory= xgp
+    export function startbit_readLineFollowerStatus(speed: number = 0): void{
+        
     }
 
 }
