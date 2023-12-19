@@ -265,7 +265,7 @@ namespace microbit_car {
     }
 
     /**
-     * Car Rotation use Mecanum wheel
+     * Car Rotation
      * @param speed [-100,100] percent of fullspeed
      */
     //% block="Car Rotation speed =$speed"
