@@ -255,7 +255,7 @@ namespace microbit_car {
      * @param speed [-100,100] percent of fullspeed
      */
     //% block="Car Rotation speed =$speed"
-    //% subcategory=xgp
+    //% subcategory=Servo/Motor
     export function CarRotation(speed: number = 0): void {
         speed = Math.max(0, Math.min(100, speed))
         MotorControl(Motor.MotorLF, speed)
