@@ -270,7 +270,7 @@ namespace microbit_car {
      */
     //% block="Car Rotation =$speed"
     //% subcategory= xgp1
-    export function startbit(speed: number = 0): void{
+    export function CarRotation1(speed: number = 0): void{
         speed = Math.max(0, Math.min(100, speed))
     }
 

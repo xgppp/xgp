@@ -5,7 +5,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "StartbitV2": "github:Hiwonder/StartbitV2#v0.0.9"
     },
     "files": [
         "README.md",
