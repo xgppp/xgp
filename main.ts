@@ -2,7 +2,7 @@
  * microbit_car
  */
 //% weight=100 color=#0fbc11 icon="\uf021"
-namespace microbit_car {
+namespace microbit_carxgp {
     let _DEBUG: boolean = false
 
     let CHIP_ADDR = 64
@@ -257,7 +257,7 @@ namespace microbit_car {
     //% block="Car Rotation speed =$speed"
     //% subcategory=Servo/Motor
     export function CarRotation(speed: number = 0): void {
-        speed = Math.max(0, Math.min(100, speed))
+        speed = Math.max(-100, Math.min(100, speed))
         MotorControl(Motor.MotorLF, speed)
         MotorControl(Motor.MotorRF, -speed)
         MotorControl(Motor.MotorLR, speed)
