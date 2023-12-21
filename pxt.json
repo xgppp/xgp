@@ -10,8 +10,7 @@
     },
     "files": [
         "README.md",
-        "main.ts",
-        "microbit_carxgp.json"
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
